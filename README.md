@@ -1,4 +1,4 @@
-# Beeceptor HTTP Callout — Playwright E2E
+# Beeceptor HTTP Callout; Playwright E2E
 
 Playwright automation for [Beeceptor](https://beeceptor.com) **HTTP Callout** (sync mode): ensure a callout rule exists in the UI, trigger the mock API, and verify the forwarded response from [postman-echo.com](https://postman-echo.com).
 
@@ -20,7 +20,6 @@ See [docs/TEST_STRATEGY.md](docs/TEST_STRATEGY.md) for scope, constraints, and d
 
 ```bash
 git clone <your-repo-url>
-cd assignment-bc
 npm install
 npx playwright install
 cp .env.example .env
@@ -115,15 +114,3 @@ Playwright API →  POST /trigger
 Beeceptor      →  Callout to postman-echo.com/post
 Assertion      →  200 + forwarded JSON body
 ```
-
-## Free plan notes
-
-- No Request History API on Free plan — verification uses sync response body
-- Callouts to other `*.beeceptor.com` URLs return 582
-- 3 rules max per endpoint; delete unused rules manually in the Beeceptor UI if needed
-- Automated rule deletion is not implemented (delete confirm UI is unreliable in Playwright)
-- 50 requests/day per endpoint
-
-## License
-
-ISC
