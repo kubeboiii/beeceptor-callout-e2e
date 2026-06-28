@@ -1,0 +1,21 @@
+{
+  "name": "beeceptor-http-callout-playwright",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Playwright E2E tests for Beeceptor HTTP Callout (sync mode)",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "test:setup": "playwright test --project=setup",
+    "auth:chrome": "bash scripts/open-chrome-debug.sh",
+    "auth:save": "node scripts/save-auth-cdp.js",
+    "auth:persistent": "node scripts/save-auth-persistent.js",
+    "auth:codegen": "playwright codegen --channel=chrome --save-storage=playwright/.auth/user.json https://app.beeceptor.com/login",
+    "report": "playwright show-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.55.0",
+    "dotenv": "^17.2.1"
+  }
+}
