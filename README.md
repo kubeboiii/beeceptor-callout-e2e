@@ -1,6 +1,12 @@
-# Beeceptor HTTP Callout; Playwright E2E
+# Beeceptor HTTP Callout — Playwright E2E
 
-Playwright automation for [Beeceptor](https://beeceptor.com) **HTTP Callout** (sync mode): ensure a callout rule exists in the UI, trigger the mock API, and verify the forwarded response from [postman-echo.com](https://postman-echo.com).
+[![Website](https://img.shields.io/badge/Website-himanshu.wtf-c0392b?style=flat-square&labelColor=555555&logo=googlechrome&logoColor=white)](https://himanshu.wtf/)
+[![Playwright](https://img.shields.io/badge/Playwright-1.55-6f42c1?style=flat-square&labelColor=555555&logo=playwright&logoColor=white)](https://playwright.dev/)
+[![JavaScript](https://img.shields.io/badge/JavaScript-ES2021-6f42c1?style=flat-square&labelColor=555555&logo=javascript&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![Beeceptor](https://img.shields.io/badge/Beeceptor-HTTP%20Callout-6f42c1?style=flat-square&labelColor=555555)](https://beeceptor.com/docs/proxy-rule-http-callout/)
+[![License](https://img.shields.io/badge/License-ISC-6f42c1?style=flat-square&labelColor=555555)](LICENSE)
+
+Playwright test for Beeceptor sync HTTP Callout: set up the rule in the UI, hit the mock URL, check the response came back from postman-echo.
 
 ## What this tests
 
@@ -17,7 +23,8 @@ Playwright automation for [Beeceptor](https://beeceptor.com) **HTTP Callout** (s
 ## Setup
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/kubeboiii/beeceptor-callout-e2e.git
+cd beeceptor-callout-e2e
 npm install
 npx playwright install
 cp .env.example .env
