@@ -105,12 +105,3 @@ assignment-bc/
 ├── playwright.config.js
 └── .env.example
 ```
-
-## Architecture
-
-```
-Playwright UI  →  Ensure sync callout rule on kubeboiii-mock (create if missing)
-Playwright API →  POST /trigger
-Beeceptor      →  Callout to postman-echo.com/post
-Assertion      →  200 + forwarded JSON body
-```
