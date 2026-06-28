@@ -5,3 +5,5 @@ test-results/
 playwright/.auth/
 playwright/.user-data/
 .DS_Store
+int-qs.md
+project-video-script.md

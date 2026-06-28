@@ -8,8 +8,6 @@ Playwright automation for [Beeceptor](https://beeceptor.com) **HTTP Callout** (s
 - End-to-end flow: Beeceptor dashboard → mock URL → postman-echo.com → assertion
 - Idempotent setup: create the rule only if `POST /trigger` is not already present
 
-See [docs/TEST_STRATEGY.md](docs/TEST_STRATEGY.md) for scope, constraints, and design decisions.
-
 ## Prerequisites
 
 - Node.js 18+
@@ -97,7 +95,6 @@ npm run report
 
 ```
 assignment-bc/
-├── docs/TEST_STRATEGY.md
 ├── fixtures/auth.setup.js      # Google login → storageState
 ├── lib/config.js               # Env + URL helpers
 ├── pages/callout-rule.page.js  # Mock Rules UI interactions
