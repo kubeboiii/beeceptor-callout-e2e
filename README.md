@@ -14,12 +14,6 @@ Playwright test for Beeceptor sync HTTP Callout: set up the rule in the UI, hit 
 - End-to-end flow: Beeceptor dashboard → mock URL → postman-echo.com → assertion
 - Idempotent setup: create the rule only if `POST /trigger` is not already present
 
-## Prerequisites
-
-- Node.js 18+
-- Beeceptor Free account with your own endpoint name (copy `.env.example` to `.env` and set `BEECEPTOR_PRIMARY_ENDPOINT`)
-- Google login to Beeceptor
-
 ## Setup
 
 ```bash
@@ -53,24 +47,6 @@ npm run auth:save
 ```
 
 Session saves to `playwright/.auth/user.json` (gitignored). You can close Chrome after `auth:save` succeeds.
-
-**Alternative** if the above still fails:
-
-```bash
-npm run auth:persistent
-```
-
-If tests redirect to login later, delete `playwright/.auth/user.json` and repeat `auth:chrome` + `auth:save`.
-
-**Security:** Never commit `.env` or `playwright/.auth/`. The auth file contains live session cookies for your Beeceptor account.
-
-## Git / what to commit
-
-Commit source files and `package-lock.json`. Do **not** commit:
-
-- `.env` (local endpoint config)
-- `playwright/.auth/` (Google session)
-- `node_modules/`, `test-results/`, `playwright-report/`
 
 ## Run tests
 
